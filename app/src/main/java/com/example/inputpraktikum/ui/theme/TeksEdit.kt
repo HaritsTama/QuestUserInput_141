@@ -58,7 +58,10 @@ fun FormDataDiri(modifier: Modifier
                 textNama = it
             }
         )
-        Row {
+        Row(
+            modifier = Modifier
+                .padding(vertical = 30.dp)
+        ) {
             gender.forEach { item ->
                 Row(modifier = Modifier.selectable(
                     selected = textJK == item,
