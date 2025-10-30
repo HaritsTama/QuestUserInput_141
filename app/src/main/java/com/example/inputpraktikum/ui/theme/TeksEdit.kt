@@ -92,28 +92,6 @@ fun FormDataDiri(modifier: Modifier
             thickness = dimensionResource(R.dimen.divider_tipis),
             color = Color.DarkGray
         )
-        Button(
-            modifier = Modifier.fillMaxWidth(1f),
-            // the button is enabled when the user makes a selection
-            enabled = textAlamat.isNotEmpty(),
-            onClick = {
-                nama=textNama
-                jenis=textJK
-                alamat=textAlamat
-            }
-        ) {
-            Text(stringResource(R.string.submit))
-        }
-
-        HorizontalDivider(
-            modifier = Modifier
-                .padding(bottom = dimensionResource(R.dimen.padding_medium),
-                    top = dimensionResource(
-                        id = R.dimen.padding_medium
-                    )),
-            thickness = dimensionResource(R.dimen.divider_tipis),
-            color = Color.DarkGray
-        )
 
         ElevatedCard (
             elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
@@ -130,6 +108,29 @@ fun FormDataDiri(modifier: Modifier
                 Text(text = "Gender : "+jenis, color = Color.White)
                 Text(text = "Alamat : "+alamat, color = Color.White)
             }
+        }
+
+        HorizontalDivider(
+            modifier = Modifier
+                .padding(bottom = dimensionResource(R.dimen.padding_medium),
+                    top = dimensionResource(
+                        id = R.dimen.padding_medium
+                    )),
+            thickness = dimensionResource(R.dimen.divider_tipis),
+            color = Color.DarkGray
+        )
+
+        Button(
+            modifier = Modifier.fillMaxWidth(1f),
+            // the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama=textNama
+                jenis=textJK
+                alamat=textAlamat
+            }
+        ) {
+            Text(stringResource(R.string.submit))
         }
     }
 }
