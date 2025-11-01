@@ -12,4 +12,5 @@ fun Praktikum(modifier: Modifier
 ) {
     var textNamaLengkap by remember { mutableStateOf("") }
     var textAlamatP by remember { mutableStateOf("") }
+    var textKelamin by remember { mutableStateOf("") }
 }
