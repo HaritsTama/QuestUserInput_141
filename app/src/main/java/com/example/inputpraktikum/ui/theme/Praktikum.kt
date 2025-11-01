@@ -18,4 +18,5 @@ fun Praktikum(modifier: Modifier
     var namal by remember { mutableStateOf("") }
     var alamatp by remember { mutableStateOf("") }
     var jenisp by remember { mutableStateOf("") }
+    var kawinp by remember { mutableStateOf("") }
 }
