@@ -19,4 +19,6 @@ fun Praktikum(modifier: Modifier
     var alamatp by remember { mutableStateOf("") }
     var jenisp by remember { mutableStateOf("") }
     var kawinp by remember { mutableStateOf("") }
+
+    val genderp:List<String> = listOf("Laki-laki","Perempuan")
 }
