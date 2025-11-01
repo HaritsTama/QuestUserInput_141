@@ -11,5 +11,5 @@ import androidx.compose.ui.Modifier
 fun Praktikum(modifier: Modifier
 ) {
     var textNamaLengkap by remember { mutableStateOf("") }
-
+    var textAlamatP by remember { mutableStateOf("") }
 }
