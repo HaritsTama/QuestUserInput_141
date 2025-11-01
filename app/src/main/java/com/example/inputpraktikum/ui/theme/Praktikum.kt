@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
@@ -200,6 +202,31 @@ fun Praktikum(modifier: Modifier
                         }
 
                         Spacer(modifier = Modifier.height(28.dp))
+
+                        Button(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(50.dp),
+                            enabled = textAlamatP.isNotEmpty(),
+                            onClick = {
+                                namal = textNamaLengkap
+                                jenisp = textKelamin
+                                kawinp = textKawin
+                                alamatp = textAlamatP
+                            },
+                            shape = RoundedCornerShape(25.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color.Blue,
+                                disabledContainerColor = Color.Gray,
+                            )
+                        ) {
+                            Text(
+                                text = "Submit",
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Medium,
+                                color = Color.White
+                            )
+                        }
                     }
                 }
             }
